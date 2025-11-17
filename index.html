@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday, Rachita</title>
+  <meta name="description" content="A birthday message from Bubui (Rohan) to Rachita — with song & a memory video."/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+  /* ---------- Theme ---------- */
+  :root{
+    --bg: #fff7fb;
+    --card: #ffffffcc;
+    --accent: #ff5ca8;
+    --muted: #6b6b6b;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg,#fff7fb 0%, #f6f9ff 60%);
+    margin:0;
+    color:#222;
+    min-height:100vh;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  .wrap{ max-width:940px; margin:0 auto; padding:20px; position:relative; z-index:3; }
+  header.hero{ text-align:center; margin-top:20px; }
+  .logo{ font-family: 'Great Vibes', cursive; font-size:2.6rem; margin:0; color:var(--accent); }
+
+  .subtitle{ margin:6px 0 14px; color:var(--muted) }
+
+  .card{
+    background:var(--card);
+    border-radius:18px;
+    padding:18px;
+    margin:14px 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    backdrop-filter: blur(6px);
+  }
+
+  .msg{ margin:12px 0; line-height:1.5; font-size:1rem; white-space:pre-wrap; }
+
+  .btn{
+    background:var(--accent); color:white; border:none;
+    padding:10px 16px; border-radius:12px; cursor:pointer;
+    font-weight:600; box-shadow:0 6px 14px rgba(255,92,168,0.15);
+  }
+  .btn.secondary{ background:white; color:var(--accent); border:1px solid #ffc9e5 }
+
+  .footer{ text-align:center; margin:24px 0; color:var(--muted) }
+
+  .hidden{ display:none!important; }
+
+  /* ---------- FLOATING BACKGROUND ART (Balloons + Cow + Owl) ---------- */
+  .bg-layer{
+    position:fixed; inset:0; z-index:1; pointer-events:none;
+    overflow:hidden;
+  }
+
+  /* Cow floating */
+  .cow{
+    position:absolute;
+    width:120px;
+    top:20%;
+    left:6%;
+    animation: floatCow 9s ease-in-out infinite;
+    opacity:0.55;
+  }
+  @keyframes floatCow{
+    0%{ transform:translateY(0) rotate(-4deg); }
+    50%{ transform:translateY(-18px) rotate(3deg); }
+    100%{ transform:translateY(0) rotate(-4deg); }
+  }
+
+  /* Owl floating */
+  .owl{
+    position:absolute;
+    width:110px;
+    right:8%;
+    top:40%;
+    opacity:0.55;
+    animation: floatOwl 10s ease-in-out infinite;
+  }
+  @keyframes floatOwl{
+    0%{ transform:translateY(0) rotate(3deg); }
+    50%{ transform:translateY(-22px) rotate(-2deg); }
+    100%{ transform:translateY(0) rotate(3deg); }
+  }
+
+  /* Hello Kitty fixed */
+  .kitty{
+    position:fixed; right:10px; bottom:10px; width:120px;
+    pointer-events:none; opacity:0.95; z-index:6;
+  }
+
+  /* Small players */
+  audio,video{
+    width:100%; border-radius:12px; background:#0001;
+  }
+
+  @media(min-width:700px){
+    .logo{font-size:3.6rem}
+    .wrap{padding:40px}
+    .kitty{width:160px; right:30px; bottom:30px}
+  }
+
+  body.playing{
+    background: radial-gradient(circle at 20% 10%, rgba(255,92,168,0.03), transparent 10%), linear-gradient(180deg,#fff7fb 0%, #f0fbff 60%);
+  }
+  </style>
+
+</head>
+<body>
+
+  <!-- Background Layer -->
+  <div class="bg-layer">
+
+    <!-- Cute floating cow -->
+    <img class="cow" alt="cute cow" src="data:image/svg+xml;utf8,
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
+        <g>
+          <ellipse cx='100' cy='130' rx='60' ry='50' fill='%23fff'/>
+          <circle cx='70' cy='80' r='35' fill='%23fff'/>
+          <circle cx='130' cy='80' r='35' fill='%23fff'/>
+          <circle cx='80' cy='75' r='6' fill='%23000'/>
+          <circle cx='120' cy='75' r='6' fill='%23000'/>
+          <ellipse cx='100' cy='100' rx='10' ry='7' fill='%23ff7cab'/>
+          <path d='M60 60c-20-10-25-25-20-30s20 0 28 10' fill='%23ffe5ef'/>
+          <path d='M140 60c20-10 25-25 20-30s-20 0-28 10' fill='%23ffe5ef'/>
+        </g>
+      </svg>
+    " />
+
+    <!-- Cute floating owl -->
+    <img class="owl" alt="cute owl" src="data:image/svg+xml;utf8,
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
+        <g>
+          <ellipse cx='100' cy='120' rx='55' ry='45' fill='%23fffceb'/>
+          <circle cx='70' cy='80' r='28' fill='%23fffceb'/>
+          <circle cx='130' cy='80' r='28' fill='%23fffceb'/>
+
+          <circle cx='80' cy='80' r='7' fill='%23000'/>
+          <circle cx='120' cy='80' r='7' fill='%23000'/>
+
+          <polygon points='100,95 92,110 108,110' fill='%23ff9f68'/>
+          <path d='M65 60c-10-8-15-20-10-25s15 0 22 8' fill='%23ffd9e6'/>
+          <path d='M135 60c10-8 15-20 10-25s-15 0-22 8' fill='%23ffd9e6'/>
+        </g>
+      </svg>
+    "/>
+
+  </div>
+
+
+  <div class="wrap">
+
+    <header class="hero">
+      <h1 class="logo">Happy Birthday, <span style="color:#ff7cb0">Rachita</span> 🎉</h1>
+      <p class="subtitle">A Story of Stone, Blossoms, and New Beginnings — from Bubui (Rohan)</p>
+    </header>
+
+    <main>
+      <section id="message" class="card"></section>
+
+      <section id="audioSection" class="card hidden">
+        <h2>Song for you</h2>
+        <audio id="song" controls preload="auto">
+          <source src="assets/media/birthday_song.mp3">
+        </audio>
+      </section>
+
+      <section id="videoIntro" class="card hidden">
+        <h2>About the video</h2>
+        <p class="meta-small">When you're ready, reveal the small video I made for you.</p>
+        <button id="revealVideo" class="btn">Reveal Video 🎁</button>
+      </section>
+
+      <section id="videoSection" class="card hidden">
+        <h2>Our memory</h2>
+        <video id="memoryVideo" controls playsinline preload="metadata">
+          <source src="assets/media/memory_video.mp4">
+        </video>
+      </section>
+    </main>
+
+    <footer class="footer card"><p>Made with ♥ by yours Bubui (Rohan)</p></footer>
+
+    <!-- Hello Kitty -->
+    <div class="kitty">
+      <svg viewBox="0 0 100 100">
+        <ellipse cx="50" cy="64" rx="30" ry="22" fill="#fff"/>
+        <circle cx="35" cy="42" r="20" fill="#fff"/>
+        <circle cx="65" cy="42" r="20" fill="#fff"/>
+        <circle cx="40" cy="40" r="2" fill="#000"/>
+        <circle cx="60" cy="40" r="2" fill="#000"/>
+        <ellipse cx="50" cy="50" rx="3" ry="2" fill="#000"/>
+        <path d="M40 30c3-6 10-6 10-6s7 0 10 6" stroke="#ff5ca8" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+
+  </div>
+
+  <script>
+  /* ---------- Inline JS ---------- */
+
+  const messageText = `🥳 A Story of Stone, Blossoms, and New Beginnings | Happy Birthday, Rachita!\n\nHappy Birthday, Rachita. Today, even from afar in Pune, I want to celebrate the beautiful soul you are and the indelible mark you've left on my life.\n\nOur story began simply: a sudden trip to the gym. I wasn't looking for anything, but then I saw you—charming, beautiful, and also glancing back. That 2.5kg dumbbell plate became the accidental start of everything. I remember searching for your name and that surge of pure, idiotic happiness when your follow request popped up at 11 PM. I was already dreaming, even though my mind told me to stop.\n\nThe magic only grew. I was completely captivated by your grace, humility, and sweetness. You trusted me enough to share your family's burdens, and I, who never opens up, found myself sharing my dark secrets and my past struggles with alcohol. It didn't matter—it only mattered that you made me feel safe. I also remember you coming to my house and, despite my diet, feeding me with your hands—I couldn't resist. And even after hearing bad things about me from my friends, you still trusted me. I’m glad now that those people were just jealous of what we had.\n\nI started to see a future: daily scooty rides, singing "Oh Isha" and "Maand" (a song that instantly reminds me of you), and "Jhol"—our songs. Meeting your mom, I was a nervous wreck—a tattooed brat facing an Indian mother. But we laughed, we shared a Bengali family lunch (with lots of fish for you, which I hate!), and my parents instantly treated you as their own, dreaming of our future marriage. That first proper date at Park Street Mocambo—you looked hell gorgeous. Every day leading up to your departure for Pune, my heart fumbled more. I will forever cherish that final image: your beautiful, window-seat smile at the railway station. My mom and dad still talk about our marriage.\n\nThe distance grew, and video calls became a daily ritual. I met your roomie, Sanjana, who became the sister I never had (and the only person to ever successfully "brozone" me with a Rakhi!). I missed you every day and even bought tickets to fly to Pune. But the distance grew, and you couldn't make much time. I ended up breaking the promise I wrote in that poem...\n\nI know I was wrong, but if you could give me one last chance? We can again ride long and sing “Oh Rachitaaaa” together. Please forgive me. I know it's very hard to trust me because of your past, but this time I won't make any mistakes. I believe in always repairing rather than replacing.\n\nI will always wait for you, Rachita. I can't force you to stay; you are a free bird, but can we start fresh? I couldn't keep my promise to come to Pune for your birthday this time, but if we just stick along and try, nobody can prove us wrong. You once asked me to propose to you; this is my proposal to you on your birthday. The least I can do is send this small video I made.\n\nHappy Birthday, Rachita. I love you and always will.\n\nIf you don't accept my proposal, I will be a little heartbroken, but you are a wonderful girl. I will always pray for your good future and for a good life partner for you. I used to dream that my in-laws' house was so near to mine—it will only be a dream now. I’ll cherish our moments forever. You have been a beautiful part of my heart that I’ll never forget.\n\nAnd even if someday we stop talking again, just remember—I’ll always be one call away. My Instagram is only for posting; half of it is fake, you know that. And if you ever want me to stop posting, I’ll do it happily, just to give you a peaceful, “happily ever after” kind of life. I’ve always considered you my soulmate. I hate tears on your pretty face, so please smile, otherwise your eyelids will get puffy. I even added the cow and the owl here—wish I could’ve added Buri Buri Xiamon too, but I spared you this time only because it's your birthday.\n\nOnce again, happy birthday.`; 
+
+
+  const msgEl = document.getElementById("message");
+  messageText.split("\n\n").forEach(t=>{
+    let p=document.createElement("p");
+    p.className="msg";
+    p.textContent=t;
+    msgEl.appendChild(p);
+  });
+
+  const audioSection=document.getElementById("audioSection");
+  const videoIntro=document.getElementById("videoIntro");
+  const videoSection=document.getElementById("videoSection");
+  const revealBtn=document.getElementById("revealVideo");
+  const song=document.getElementById("song");
+  const vid=document.getElementById("memoryVideo");
+
+  setTimeout(()=>{
+    audioSection.classList.remove("hidden");
+    videoIntro.classList.remove("hidden");
+  },800);
+
+  song.addEventListener("play",()=>{document.body.classList.add("playing"); if(!vid.paused) vid.pause();});
+  song.addEventListener("pause",()=>document.body.classList.remove("playing"));
+  vid.addEventListener("play",()=>{ if(!song.paused) song.pause(); });
+
+  revealBtn.onclick=()=>{
+    videoSection.classList.remove("hidden");
+    revealBtn.disabled=true;
+    revealBtn.textContent="Video revealed ✅";
+  };
+  </script>
+
+</body>
+</html>
