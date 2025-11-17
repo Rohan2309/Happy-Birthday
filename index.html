@@ -109,12 +109,71 @@
     background: radial-gradient(circle at 20% 10%, rgba(255,92,168,0.03), transparent 10%), 
                 linear-gradient(180deg,#fff7fb 0%, #f0fbff 60%);
   }
+  /* Floating pastel balloons */
+.balloon-set {
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+.balloon {
+  position:absolute;
+  width:90px;
+  opacity:0.45;
+  animation: balloonFloat 10s ease-in-out infinite;
+}
+
+.b1 { left:10%; top:10%; animation-delay:-1s; }
+.b2 { left:70%; top:25%; animation-delay:-3s; }
+.b3 { left:40%; top:5%;  animation-delay:-2s; }
+
+@keyframes balloonFloat {
+  0%   { transform:translateY(0px) rotate(-2deg); }
+  50%  { transform:translateY(-25px) rotate(2deg); }
+  100% { transform:translateY(0px) rotate(-2deg); }
+}
+.confetti-layer {
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(circle, rgba(255,182,216,0.25) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,220,244,0.25) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,170,200,0.25) 2px, transparent 2px);
+  background-size: 200px 200px, 180px 180px, 220px 220px;
+  animation: confettiDrift 14s linear infinite;
+}
+
+@keyframes confettiDrift {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  100% { background-position: 0 200px, 0 180px, 0 220px; }
+}
+
   </style>
 </head>
 <body>
 
   <!-- Background -->
   <div class="bg-layer">
+    <!-- Pastel Floating Balloons -->
+<div class="balloon-set">
+  <svg class="balloon b1" viewBox="0 0 100 140">
+    <ellipse cx="50" cy="60" rx="35" ry="45" fill="#ffd1e8"/>
+    <line x1="50" y1="105" x2="50" y2="140" stroke="#ff9acb" stroke-width="2"/>
+  </svg>
+
+  <svg class="balloon b2" viewBox="0 0 100 140">
+    <ellipse cx="50" cy="60" rx="35" ry="45" fill="#ffe4f2"/>
+    <line x1="50" y1="105" x2="50" y2="140" stroke="#ffc6e7" stroke-width="2"/>
+  </svg>
+
+  <svg class="balloon b3" viewBox="0 0 100 140">
+    <ellipse cx="50" cy="60" rx="35" ry="45" fill="#ffeef9"/>
+    <line x1="50" y1="105" x2="50" y2="140" stroke="#ffd8f2" stroke-width="2"/>
+  </svg>
+</div>
+<!-- Tiny confetti dots -->
+<div class="confetti-layer"></div>
 
     <!-- Cow -->
     <img class="cow" alt="cute cow" src="data:image/svg+xml;utf8,
